@@ -1,0 +1,81 @@
+<form [formGroup]="productForm" (ngSubmit)="submit()" *ngIf="isFormCreated">
+  <div class="row">
+    <div class="mb-3 col-md-4">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="text" class="form-control" formControlName="name" >
+    </div>
+    <div class="mb-3 col-md-4">
+      <label  class="form-label">Description</label>
+      <input type="text" class="form-control" formControlName="description">
+    </div>
+    <div class="mb-3 col-md-4">
+        <label  class="form-label">Price</label>
+        <input type="number" class="form-control" formControlName="price">
+      </div>
+      <!-- <div class="mb-3 col-md-4">
+        <label  class="form-label">PhoneNumber</label>
+        <input type="text" class="form-control" formControlName="phoneNumber">
+      </div>
+    </div> -->
+
+    <!-- <div class="mt-4 text-primary fw-bold" >Address</div> -->
+    <!-- <div formArrayName="customerAddress">
+      <div *ngFor="let address of addresses.controls;let i = index">
+        <div class="row" [formGroupName]="i" id="number-{{ i }}">
+          <div class="mb-3 col-md-3">
+            <label for="addressLine1" class="form-label">Address 1</label>
+            <input type="text" class="form-control" formControlName="addressLine1">
+          </div>
+          <div class="mb-3 col-md-3">
+            <label for="addressLine2" class="form-label">Address 2</label>
+            <input type="text" class="form-control" formControlName="addressLine2">
+          </div>
+          <div class="mb-3 col-md-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" formControlName="city">
+          </div>
+          <div class="mb-3 col-md-3">
+            <label for="state" class="form-label">State</label>
+            <input type="text" class="form-control" formControlName="state">
+          </div>
+          <div class="mb-3 col-md-3">
+            <label for="postalCode" class="form-label">PostalCode</label>
+            <input type="text" class="form-control" formControlName="postalCode">
+          </div>
+          <div class="mb-3 col-md-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" class="form-control" formControlName="country">
+          </div>
+           <div class="mb-3 col-md-3 ">
+            <label for="isShippingAddress" class="form-label">Is Shipping Address</label>
+            <input type="checkbox" class="form-check-input form-control" formControlName="isShippingAddress">
+          </div> -->
+          <!-- <div class="mb-3 col-md-3 " >
+            <label for="isBillingAddress" class="form-label">Is Billing Address</label>
+            <div class="d-flex">
+              <input type="checkbox" class=" form-check-input form-control" formControlName="isBillingAddress">
+              <button
+                *ngIf="i < addresses.controls.length - 1"
+                type="button"
+                class="btn btn-danger ms-auto  d-flex justify-content-center"
+                id="btn-{{ i }}"
+                (click)="onMinusAddress(i)"
+              >
+                -
+              </button>
+            </div>
+          </div> -->
+          <!-- <hr *ngIf="i < addresses.controls.length - 1" />
+          <button
+              *ngIf="i === addresses.controls.length - 1"
+              type="button"
+              class="btn btn-dark col-2  h-75 d-flex justify-content-center ms-auto"
+              (click)="onAddAddress()"
+            >Add Address</button> 
+        </div>
+      </div>-->
+
+      </div> 
+
+    <button type="submit" class="mt-4 btn btn-primary" [disabled]="productForm.invalid">Submit</button>
+</form>

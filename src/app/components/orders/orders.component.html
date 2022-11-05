@@ -1,0 +1,39 @@
+<div class="row justify-content-end">
+  <button type="button" class="col-1 mb-3 me-4 bg-dark btn btn-primary" routerLink="/order/create" routerLinkActive="active">Create</button>
+
+</div>
+
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">status</th>
+      <th scope="col">date</th>
+      <th scope="col">customerID</th>
+      <th scope="col">tax</th>
+      <th scope="col">subtotal</th>
+      <th scope="col">grandTotal</th>
+      <th scope="col">lineNo</th>
+      <th scope="col">linePrice</th>
+      <th scope="col">lineOrderQty</th>
+      <th scope="col">lineTaxAmount</th>
+      <th scope="col">lineTotal</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="listOfOrders.length > 0">
+    <tr *ngFor="let item of listOfOrders;">
+      <td>{{item.id}}</td>
+      <td>{{item.status}}</td>
+      <td>{{item.date }}</td>
+      <td>{{item.customerID}}</td>
+      <td>{{item.tax}}</td>
+      <td>{{item.subtotal}}</td>
+      <td>{{item.grandTotal}}</td>
+      <td>{{item.lineNo}}</td>
+      <td>{{item.linePrice}}</td>
+      <td>{{item.lineOrderQty}}</td>
+      <td>{{item.lineTaxAmount}}</td>
+      <td>{{item.lineTotal}}</td>
+    </tr>
+  </tbody>
+</table>

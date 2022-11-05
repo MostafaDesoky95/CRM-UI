@@ -1,0 +1,67 @@
+<form [formGroup]="orderForm" (ngSubmit)="submit()" *ngIf="isFormCreated">
+  <div class="row">
+    <div class="mb-3 col-md-4">
+      <label for="exampleInputEmail1" class="form-label">status</label>
+      <input type="text" class="form-control" formControlName="status" >
+      <!-- <select>
+      <option class="form-control"  [ngValue]="null">Select one...</option>
+      <option class="form-control"*ngFor="let type of orderStatus | keyvalue" [ngValue]="type.value">{{type.value}}</option>
+    </select> -->
+  </div>
+  
+    <div class="mb-3 col-md-4">
+      <label  class="form-label">Date</label>
+      <input type="datetime-local" class="form-control" formControlName="date">
+    </div>
+    <div class="mb-3 col-md-4">
+        <label  class="form-label">Price</label>
+        <input type="number" class="form-control" formControlName="price">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">tax</label>
+        <input type="number" class="form-control" formControlName="tax">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">subtotal</label>
+        <input type="number" class="form-control" formControlName="subtotal">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">grandTotal</label>
+        <input type="number" class="form-control" formControlName="grandTotal">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">lineNo</label>
+        <input type="number" class="form-control" formControlName="lineNo">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">linePrice</label>
+        <input type="number" class="form-control" formControlName="linePrice">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">lineOrderQty</label>
+        <input type="number" class="form-control" formControlName="lineOrderQty">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">lineTaxAmount</label>
+        <input type="number" class="form-control" formControlName="lineTaxAmount">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">shippingAddressID</label>
+        <input type="number" class="form-control" formControlName="shippingAddressID">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">billingAddressID</label>
+        <input type="number" class="form-control" formControlName="billingAddressID">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">customerID</label>
+        <input type="number" class="form-control" formControlName="customerID">
+      </div>
+      <div class="mb-3 col-md-4">
+        <label  class="form-label">productID</label>
+        <input type="number" class="form-control" formControlName="productID">
+      </div>
+
+</div>
+    <button type="submit" class="mt-4 btn btn-primary" [disabled]="orderForm.invalid">Submit</button>
+</form> 

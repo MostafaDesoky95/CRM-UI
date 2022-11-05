@@ -1,0 +1,25 @@
+<div class="row justify-content-end">
+  <button type="button" class="col-1 mb-3 me-4 bg-dark btn btn-primary" routerLink="/product/create" routerLinkActive="active">Create</button>
+
+</div>
+
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">IsActive</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="listOfProducts.length > 0">
+    <tr *ngFor="let item of listOfProducts;">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.description}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.isActive}}</td>
+    </tr>
+  </tbody>
+</table>
